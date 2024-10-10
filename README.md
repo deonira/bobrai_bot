@@ -13,7 +13,7 @@ Weather_bobrai — это Telegram-бот(тест для компании BobrA
 - **Django REST Framework** — для создания RESTful API
 - **Telegram Bot API** — для взаимодействия с Telegram
 - **HTTPX** — для выполнения HTTP-запросов
-- **SQLite/PostgreSQL** — для хранения данных
+- **SQLite** — для хранения данных
 
 ## Установка
 
