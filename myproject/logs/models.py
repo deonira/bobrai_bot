@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class RequestLog(models.Model):
     user_id = models.CharField(max_length=100)
@@ -7,11 +9,11 @@ class RequestLog(models.Model):
     response = models.TextField()
 
     def __str__(self):
-        return f'{self.user_id} - {self.command} - {self.timestamp}'
+        return f'{self.user_id} - {self.command} - {self.response} - {self.timestamp}'
 
-class UserSetting(models.Model):
-    user_id = models.CharField(max_length=100, unique=True)
-    preferred_city = models.CharField(max_length=200)
+class UserSettings(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    preferred_city = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return f'{self.user_id} - {self.preferred_city}'
