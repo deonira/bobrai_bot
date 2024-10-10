@@ -20,7 +20,7 @@ Weather_bobrai — это Telegram-бот(тест для компании BobrA
 1. **Клонируйте репозиторий**:
 
    ```bash
-   git clone https://github.com/deonira/tgbot.git
+   git clone https://github.com/deonira/bobrai_bot.git
    cd myproject
 2. **Установите зависимости**:
    ```bash
